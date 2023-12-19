@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MemoryLeakDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkitBehaviors="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Image
+            x:Name="Image"
+            HeightRequest="100"
+            WidthRequest="100">
+            <Image.Behaviors>
+                <toolkitBehaviors:IconTintColorBehavior TintColor="Aqua" />
+            </Image.Behaviors>
+        </Image>
+
+        <Button
+            x:Name="Image1Btn"
+            Clicked="Image1Btn_OnClicked"
+            HorizontalOptions="Fill"
+            Text="Image 1" />
+
+        <Button
+            x:Name="Image2Btn"
+            Clicked="Image2Btn_OnClicked"
+            HorizontalOptions="Fill"
+            Text="Image 2" />
+    </VerticalStackLayout>
+
+</ContentPage>
